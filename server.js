@@ -43,7 +43,6 @@ io.on("connection",socket=>{
     });
 
     socket.on("disconnect-call",payload=>{
-        console.log("Call to be disconnected");
         if(payload.target){
             io.to(payload.target).emit("disconnect-call",payload);// sending back event
         }         

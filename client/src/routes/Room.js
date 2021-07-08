@@ -45,12 +45,8 @@ const Room = (props) => {
 
             userVideo.current.srcObject = stream;       //webcam video
             userStream.current = stream;                //local stream
-
-            console.log(ownUserName);
-
             socketRef.current = io.connect("/");
             socketRef.current.emit("join room", props.match.params.roomID);// emit join room event
-            console.log("Joined room cient");
 
             socketRef.current.on('other user', userID => { //get the userID of 1st person already in room
                 callUser(userID);
@@ -196,7 +192,6 @@ const Room = (props) => {
     };
 
     function handleRemoveTrackEvent(){
-        console.log("Rmoved tracks");
         var tracklist=partnerVideo.current.srcObject.getTracks();
         if(tracklist.length===0){
             closeVideoCall();
@@ -206,7 +201,6 @@ const Room = (props) => {
     
     
     function handleChange(e) {  //Change the value of text when something written in textarea of chat
-        console.log("handle Text Change");
         setText(e.target.value);
 
     }
@@ -225,7 +219,6 @@ const Room = (props) => {
     
 
     function renderMessage(message, index) {
-        console.log("Render msg");
         if (message.yours) {                    // if the person is sending msg
             return (
                 <div className="MyRow" key={index}>
@@ -263,7 +256,6 @@ const Room = (props) => {
        
         }
         else{                                       //if mic muted
-            console.log("Off");
             setmicState(mic);
             e.target.style.backgroundColor='#DBE6FD';
             setaudioOff(false);
