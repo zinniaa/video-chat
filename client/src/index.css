@@ -1,0 +1,299 @@
+* {
+  margin: 0;
+  color: #333;
+  }
+
+  html,body,#root, .App{
+    height: 100%;
+    width: 100%;
+  }
+
+
+  /*Nav bar*/
+.navbar {
+
+  font-size: large;
+  padding: 1%;
+  display: flex;
+  margin: 0 auto;
+  border-bottom: 1px solid #b7baf1;
+  background-color: #e8ebfd;
+  height: 3%;
+
+}
+
+.navbar .links {
+  margin-left: auto;
+}
+.navbar a {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+}
+.navbar a:hover {
+  color: #c8c9d8;
+  background-color: #4b53bc;
+  border-radius: 3px;
+}
+
+
+/*Create Room*/
+.Room {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: row;
+  height: 90%;
+  padding:10px;
+  background-color: #e8ebfd;
+
+}
+
+.column {
+  flex: 50%;
+  padding: 50px;
+}
+
+.column h1,h2{
+  color: #4b53bc;
+}
+
+.meet{
+  padding: 20px;
+  margin: 10px 5px;
+  
+}
+.meet button{
+  background-color: #4b53bc ;
+  color: #fff;
+  border-radius: 3px;
+  border: 0;
+  padding: 12px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.column input{
+  margin-left: 10px;
+  padding: 8px;
+}
+
+.meet h3{
+  display: inline;
+}
+
+.meet a{
+  text-decoration: none;
+  color:#4b53bc ;
+  padding: 5px;
+  margin-left: 5px;
+}
+
+
+/*Room*/
+
+.Container{
+  height: 90%;
+  width: 98%;
+  padding: 1%;
+  background-color: #e8ebfd;
+  background-color: #222831;
+}
+
+
+.RoomContainer{
+  height: 90%;
+  width: 98%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  position: relative;
+
+
+}
+
+.RoomContainer button{
+  width: 100%;
+  border: 0;
+  height: 5%;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #3941b4;
+  color: white;
+  font-size: 18px;
+}
+
+.Invite{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  height: 20%;
+  width: 20%;
+  margin: auto;
+  padding: 1%;
+  border: 1px solid #c9d9fc;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #DBE6FD;
+  position: absolute;
+  left: 2%;
+  top: 2%; 
+  z-index: 1; 
+}
+
+.InviteLink{
+  padding: 7px;
+  margin-top: 5px;
+  background-color: white;
+  border-radius: 10px;
+}
+.Invite button{
+  background-color: #4b53bc ;
+  color: #fff;
+  border: 0;
+  cursor: pointer;
+  margin-top: 2px;
+  padding: 7px;
+  border-radius: 5px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.Video{
+  height: 100%;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  
+}
+
+.Own{
+
+  height: 100%;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.473);
+  align-items: center;
+}
+
+.UserVid{
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.473);
+  align-items: center;
+  height: 20%;
+  position: absolute;
+  right: 2%;
+  bottom: 2%;
+  z-index: 1;
+
+}    
+.PeerVid{
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.473);
+  align-items: center;
+  height: 100%; 
+}
+
+.Video p{
+  position: absolute;
+  left: 1%;
+  bottom: 1%;
+  padding: 1px;
+  background-color: grey;
+  color: #fff;
+}
+.Chat{
+
+  width: 20%;
+  height: 94%;
+  flex-direction: column;
+  padding: 1%;
+  border: 1px solid grey;
+  border-radius: 5px; 
+  background-color: #eff4ff;
+  display: none;
+    margin-left: 5%;
+}
+
+.Chat h2{
+  border-bottom: 1px solid #b7baf1;
+  text-align: center;
+}
+
+.Messages{
+  width: 98%;
+  height: 82%;
+  overflow: auto;
+}
+
+.Messages h4{
+  margin-top: 1%;
+  background-color: rgba(212, 211, 211, 0.575);
+  border-radius: 4px;
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+textarea{
+  border-radius: 9px;
+  width: 98%;
+  height: 8%;
+  overflow: auto;
+}
+
+
+.MyRow{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+.MyMsg{
+  width: 45%;
+  background-color: #4b53bc;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.PartnerRow{
+  justify-content: flex-start;
+}
+
+.PartnerMessage{
+  width: 45%;
+  background-color: grey;
+  color: white;
+  border: 1px solid lightgray;
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px;
+  
+}
+
+.Controls{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 1px;
+}
+
+.Controls button{
+  border: 0;
+  border-radius: 100%;
+  background-color: #DBE6FD;
+  margin: 4px;
+  height: 40px;
+  width: 40px;
+  padding: 2px;
+  position: relative;
+}
+
+.Controls img{
+  height: 34px;
+  width: 34px;
+  padding: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 100%;
+}
+
+
