@@ -1,6 +1,8 @@
+require("dotenv").config();
 const express=require("express");
 const app=express();
 const http=require("http");
+const path = require("path");
 const server=http.createServer(app);
 const socket=require("socket.io"); 
 const io=socket(server);
@@ -51,8 +53,13 @@ io.on("connection",socket=>{
 
 });
 
-
-
-server.listen(8000,()=>{
-    console.log("Server running on port 8000")
+if (process.env.PROD){
+    app.use(express.static(path.join(__dirname,'./client/build')));
+    app.get('*',(req,res)=>{
+        res.sendFile(path.join(__dirname,'./client/build/index.html'));
+    })
+}
+const port=process.env.PORT || 8000;
+server.listen(port,()=>{
+    console.log(`Server running on port ${port}`)
 });
